@@ -10,6 +10,6 @@ public class DeviceUtil {
     public static boolean getNetworkConnection(Context context){
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
-        return networkInfo.isConnected();
+        return networkInfo != null && networkInfo.isConnected();
     }
 }

@@ -1,6 +1,7 @@
 package com.bigpicture.daniel.unlimit;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -19,6 +20,11 @@ public class MainActivity extends AppCompatActivity {
         if(!DeviceUtil.getNetworkConnection(this)){
             showDialog();
         }
+
+        Intent intent = new Intent(this, BaseActivity.class);
+        startActivity(intent);
+
+        finish();
     }
 
     private void showDialog()
